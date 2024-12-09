@@ -1,0 +1,286 @@
+/* Global Styles */
+body {
+  background-color: white; /* Dark background */
+  color: white;              /* Light text color */
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1{
+  color: black;
+  font-family: sans-serif;
+}
+/* Centering the App */
+.App {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color:white;
+}
+
+/* Dashboard layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px;                             /* Space between grid items */
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 30px;
+  color:white;
+}
+
+/* Title Section */
+.title-section {
+  text-align: center;
+  grid-column: span 3;  /* Make the title span across all 3 columns */
+  padding-bottom: 20px;
+}
+
+.title-section h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Grid Layout for content sections */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* Chart Section */
+.chart-section {
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Add shadow for depth */
+}
+
+.chart-container canvas {
+  border-radius: 10px;  /* Rounded edges for canvas */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Filter Section */
+.filter-section {
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.filter-container {
+  margin-bottom: 20px;
+}
+
+.filter-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-item {
+  margin-bottom: 10px;
+}
+
+.filter-item label {
+  font-weight: 500;
+  color: green;
+}
+
+.form-control,
+.form-select {
+  border-radius: 8px; /* Rounded input fields */
+  padding: 8px;
+  /* background-color: #333; */
+  /* color: white; */
+  border: 1px solid #444;
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Summary Section */
+.summary-section {
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.summary-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.summary-container li {
+  margin: 8px 0;
+  font-size: 1.1rem;
+  color: green;
+}
+
+.summary-container li strong {
+  color: #00c4cc; /* Accent color for file names */
+}
+
+/* Loading & Error Message */
+.loading, .error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+
+/* Filter Section */
+.filter-container {
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.filter-container h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: green;
+}
+
+.header-info{
+  color: black;
+}
+
+/* Filter Controls */
+.filter-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-item label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.filter-item select,
+.filter-item input {
+  color:white;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #333;
+  color: white;
+  width: 100%;
+  color: green;
+}
+
+.filter-item button {
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.filter-item button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  .filter-controls {
+    grid-template-columns: 1fr;
+    
+  }
+}
+
+.filter-item select:hover,
+.filter-item input:hover {
+  background-color: #555;
+  border-color: #007bff;
+  color:white;
+}
+
+.filter-item select:focus,
+.filter-item input:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #444;
+}
+.reset-button{
+  margin-top: 0px;
+}
+/* Apply white color to table text */
+.table th, .table td {
+  color: black; /* Set text color to white */
+}
+
+/* Optional: Styling for better visibility on dark background */
+.table {
+  background-color: white; /* Dark background color for table */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: white; /* Slightly different color for odd rows */
+}
+
+.table-bordered {
+  border: 1px solid #555; /* Border color for better visibility */
+}
+
+.table th {
+  background-color: black; /* Dark background for table headers */
+  color: #fff; /* Ensure headers are also white */
+}
+/* Custom CSS for positioning the event source info */
+.event-source-info {
+  /* position: absolute; */
+  bottom: 0;
+  right: 10px;
+  width: 250px;
+  /* background-color: #f8f9fa; */
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.event-source-info h5 {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.event-source-info ul {
+  padding-left: 20px;
+  color:black;
+}
+
+.event-source-info li {
+  font-size: 14px;
+  color:black;
+}
